@@ -1,0 +1,53 @@
+{
+    "name": "yassir-playwright",
+    "version": "0.0.0",
+    "scripts": {
+      "pw:i": "npx playwright install --with-deps",
+      "pw:i-branded": "npx playwright install msedge && npx playwright install chrome",
+      "test-regression": "npx playwright test -c playwright.config.ts --grep @regression",
+      "report-common": "allure serve ./artifacts/common/allure",
+      "lint": "eslint \"src/**/*.ts\"",
+      "lint:fix": "eslint \"src/**/*.ts\" --fix",
+      "prettier": "npx prettier --write \"src/**/*.ts\""
+    },
+    "private": true,
+    "dependencies": {
+      "@faker-js/faker": "^8.4.1",
+      "@playwright/test": "^1.45.0",
+      "@types/axios": "^0.14.0",
+      "@types/luxon": "^3.4.2",
+      "allure-playwright": "3.0.0-beta.3",
+      "axios": "^1.7.2",
+      "dotenv": "^16.4.5",
+      "form-data": "^4.0.0",
+      "gmail-tester": "^1.3.8",
+      "husky": "^9.0.11",
+      "luxon": "^3.4.4",
+      "mongodb": "^6.8.0",
+      "playwright": "^1.45.0",
+      "playwright-testrail-reporter": "^1.2.1",
+      "typescript": "^5.5.2"
+    },
+    "devDependencies": {
+      "@types/eslint": "^8.56.10",
+      "@types/node": "^20.14.9",
+      "@typescript-eslint/eslint-plugin": "7.14.1",
+      "@typescript-eslint/parser": "7.14.1",
+      "eslint": "^8.57.0",
+      "eslint-config-prettier": "^9.1.0",
+      "eslint-plugin-import": "^2.29.1",
+      "eslint-plugin-prettier": "^5.1.3",
+      "eslint-plugin-simple-import-sort": "^12.1.0",
+      "eslint-plugin-unused-imports": "^3.2.0",
+      "prettier": "^3.3.2",
+      "prettier-plugin-organize-imports": "^3.2.4",
+      "tslint-config-prettier": "^1.18.0"
+    },
+    "husky": {
+      "hooks": {
+        "pre-commit": "prettier"
+      }
+    },
+    "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
+  }
+  

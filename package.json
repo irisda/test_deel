@@ -1,5 +1,5 @@
 {
-    "name": "yassir-playwright",
+    "name": "deel-testing",
     "version": "0.0.0",
     "scripts": {
       "pw:i": "npx playwright install --with-deps",

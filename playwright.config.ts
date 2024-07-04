@@ -10,7 +10,7 @@ export default defineConfig({
     fullyParallel: true,
     forbidOnly: !!process.env.CI,
     retries: process.env.CI ? 1 : 1,
-    workers: process.env.CI ? '100%' : '100%',
+    workers: 1,
     reporter: process.env.CI
         ? [
               ['json', { outputFile: 'artifacts/common/report.json' }],
@@ -39,7 +39,6 @@ export default defineConfig({
                 launchOptions: { slowMo: 500 },
             },
         }
-
     ],
     outputDir: 'test-results/',
 });

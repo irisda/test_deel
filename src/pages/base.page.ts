@@ -18,7 +18,7 @@ export type Cookie = {
 };
 
 export abstract class BasePage {
-  protected readonly page: Page;
+  public readonly page: Page;
 
   public constructor(page: Page) {
     this.page = page;
